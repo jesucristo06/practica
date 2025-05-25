@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Proyecto</title>
+</head>
+<body>
+    <header>
+        <h1>Mi maqueta</h1>
+        <nav>
+          <ul>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#" id="ver-carrito">Carrito🛒</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a mi Proyecto</h2>
+            <p>Descubre los mejores productos al mejor precio. ¡Todo lo que necesitas en un solo lugar!</p>
+            <a href="#productos" class="btn-cta">Explorar Productos</a>
+        </div>
+    </section>
+    <section class="presentation">
+        <div class="presentation-content">
+            <h2>¿Quiénes Somos?</h2>
+            <p>En <strong>Mi proyecto</strong>, nos apasiona ofrecer ropa de alta calidad que combine estilo y comodidad. Desde camisetas casuales hasta accesorios elegantes, tenemos algo para todos los gustos.</p>
+            <p>Nuestro objetivo es brindarte una experiencia de compra única, con productos cuidadosamente seleccionados y precios accesibles. ¡Explora nuestra colección y encuentra tu próximo look favorito!</p>
+        </div>
+        <div class="presentation-image">
+            <img src="img/imagen pro.avif" alt="Ropa y accesorios" />
+        </div>
+    </section>
+
+      <main>
+        <section id="productos" class="productos-container">
+         <button class="scroll-btn left" onclick="scrollProductos(-300)">&#8249;</button>
+         <div class="productos">
+          <div class="producto">
+            <img src="img/camisa.jpg" alt="Camisa">
+            <h2>Camisa</h2>
+            <p>$25</p>
+            <button onclick="agregarAlCarrito('Camisa', 25)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/campera.jpg" alt="Campera">
+            <h2>Campera</h2>
+            <p>$75</p>
+            <button onclick="agregarAlCarrito('Campera', 25)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/pantalon.jpg" alt="Pantalón">
+            <h2>Pantalón</h2>
+            <p>$55</p>
+            <button onclick="agregarAlCarrito('Pantalón', 25)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/Cinturón.jpg" alt="cinturón">
+            <h2>Cinturón</h2>
+            <p>$35</p>
+            <button onclick="agregarAlCarrito('Cinturón', 25)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/remera.avif" alt="Remera">
+            <h2>Remera</h2>
+            <p>$40</p>
+            <button onclick="agregarAlCarrito('Remera', 40)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/zapatos.jpg" alt="Zapatos">
+            <h2>Zapatos de Cuero</h2>
+            <p>$60</p>
+            <button onclick="agregarAlCarrito('Zapatos de Cuero', 60)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/reloj.jpg" alt="Reloj">
+            <h2>Reloj</h2>
+            <p>$80</p>
+            <button onclick="agregarAlCarrito('Reloj', 80)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/gorra.jpg" alt="Gorra">
+            <h2>Gorra Roja</h2>
+            <p>$15</p>
+            <button onclick="agregarAlCarrito('Gorra Roja', 15)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/mochila.jpg" alt="Mochila">
+            <h2>Mochila Escolar</h2>
+            <p>$50</p>
+            <button onclick="agregarAlCarrito('Mochila Escolar', 50)">Agregar</button>
+          </div>
+         </div>
+         <button class="scroll-btn right" onclick="scrollProductos(300)">&#8250;</button>
+        </section>
+      </main>
+
+      <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos en <strong>contacto@mitienda.com</strong>.</p>
+    </section>
+
+      <aside id="carrito" class="oculto">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button class="checkout-btn">Finalizar Compra</button>
+      </aside>
+      <script src="script.js"></script>
+
+      <footer>
+        <p>&copy; 2025 Jesús Beltramino. Todos los derechos reservados.</p>
+      </footer>
+</body>
+</html>
